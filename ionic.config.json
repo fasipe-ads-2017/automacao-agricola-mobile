@@ -1,0 +1,7 @@
+{
+  "name": "automacaoAgricola",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
