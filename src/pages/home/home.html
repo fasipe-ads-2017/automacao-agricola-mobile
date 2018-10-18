@@ -8,11 +8,22 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>Sensor de umidade</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="row">
+    <div class="col-md-6">
+      <div style="display: block;">
+        <canvas *ngIf="!isLoading" baseChart width="350" height="400" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <button ion-button block icon-start (click)="atualizar()">
+    <ion-icon name="refresh"></ion-icon> Atualizar dados
+  </button>
+
+  <div class="row">
+    <img class="logo_fasipe" src="assets/imgs/logo.png" />
+  </div>
 </ion-content>
