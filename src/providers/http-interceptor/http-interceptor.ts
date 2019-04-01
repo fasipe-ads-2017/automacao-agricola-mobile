@@ -27,6 +27,7 @@ export class HttpInterceptorProvider implements HttpInterceptor {
         loader.dismiss();
       }
     }, (err: any) => {
+      loader.dismiss();
       if (err instanceof HttpErrorResponse) {
 
         if (err.status === 401 || err.status === 403 || err.status === 407) {

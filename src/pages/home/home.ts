@@ -93,7 +93,7 @@ export class HomePage {
 
     this.isLoading = false;
 
-    this.chart.chart.update();
+    // this.chart.chart.update();
   }
 
   // events
